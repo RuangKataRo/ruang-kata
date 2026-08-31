@@ -3,340 +3,273 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ruang Kata — lirik, cerita di balik lirik, dan catatan KIDI EFCI Musik oleh Rofiknty.">
-<title>Ruang Kata — KIDI EFCI Musik</title>
+
+<title>Ruang Kata — Rofiknty</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   color:#eee;
+  line-height:1.8;
   background:
-    radial-gradient(circle at 15% 10%,rgba(91,104,145,.22),transparent 28%),
-    radial-gradient(circle at 85% 25%,rgba(116,82,130,.18),transparent 30%),
-    radial-gradient(circle at 50% 90%,rgba(58,82,100,.16),transparent 35%),
-    linear-gradient(135deg,#07090d,#10131b 48%,#080a0e);
-  background-attachment:fixed;
-  line-height:1.75;
+    radial-gradient(circle at 15% 10%,rgba(101,65,180,.28),transparent 28%),
+    radial-gradient(circle at 85% 25%,rgba(30,130,170,.20),transparent 30%),
+    radial-gradient(circle at 50% 80%,rgba(170,70,120,.16),transparent 32%),
+    #080b12;
   min-height:100vh;
 }
-body:before{
+
+body::before{
   content:"";
   position:fixed;
   inset:0;
   pointer-events:none;
-  opacity:.16;
-  background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
-  background-size:42px 42px;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(255,255,255,.035) 1px,transparent 1px),
+    radial-gradient(circle at 80% 70%,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:80px 80px,120px 120px;
+  z-index:-1;
 }
-a{color:inherit}
 
+/* HEADER */
 header{
-  position:relative;
   text-align:center;
-  padding:72px 18px 55px;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.logo{
-  display:inline-block;
-  font-size:13px;
-  letter-spacing:5px;
-  color:#aeb5c4;
-  margin-bottom:10px
+  padding:70px 20px 45px;
+  background:
+    linear-gradient(180deg,rgba(17,22,35,.96),rgba(8,11,18,.75));
+  border-bottom:1px solid #272d3b;
 }
 
 header h1{
-  font-size:clamp(38px,9vw,66px);
+  font-size:48px;
   letter-spacing:3px;
-  font-weight:800
+  margin-bottom:10px;
+}
+
+header h1 span{
+  color:#9b8cff;
 }
 
 header p{
-  margin-top:8px;
-  color:#9da4b1;
-  font-size:15px
+  max-width:720px;
+  margin:auto;
+  color:#aeb3c2;
+  font-size:17px;
 }
 
-.creator{
-  margin-top:12px;
-  font-size:13px;
-  color:#737c8b;
-  letter-spacing:2px;
-}
-
+/* NAV */
 nav{
   position:sticky;
   top:0;
-  z-index:20;
-  background:rgba(7,9,13,.86);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(255,255,255,.08);
+  z-index:10;
   display:flex;
   justify-content:center;
-  gap:6px;
-  padding:10px;
+  gap:28px;
+  padding:18px 10px;
+  background:rgba(7,10,17,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #252b38;
 }
 
-nav button{
-  border:0;
-  background:transparent;
-  color:#aeb4c0;
-  padding:9px 13px;
-  border-radius:9px;
-  font-size:13px;
-  cursor:pointer
+nav a{
+  color:#d7d9e3;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.2s;
 }
 
-nav button:hover,
-nav button.active{
-  background:rgba(255,255,255,.08);
-  color:#fff
+nav a:hover{
+  color:#a997ff;
 }
 
-main{
-  width:min(920px,100%);
+/* CONTAINER */
+.container{
+  width:min(1000px,92%);
   margin:auto;
-  padding:30px 16px 70px
 }
 
-.view{
-  display:none;
-  animation:fade .25s ease
-}
-
-.view.active{
-  display:block
-}
-
-@keyframes fade{
-  from{opacity:0;transform:translateY(5px)}
-  to{opacity:1;transform:none}
-}
-
-.hero{
+/* INTRO */
+.intro{
   text-align:center;
-  padding:35px 10px 25px
+  padding:55px 10px 30px;
 }
 
-.hero h2{
-  font-size:clamp(25px,6vw,38px);
-  margin-bottom:12px
+.intro h2{
+  font-size:30px;
+  margin-bottom:12px;
 }
 
-.hero p{
-  max-width:650px;
-  margin:auto;
-  color:#a4abb7
+.intro p{
+  color:#9da3b4;
 }
 
-.menu{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  margin:30px 0 12px
+/* SECTION */
+section{
+  padding:45px 0;
 }
 
-.menu button{
-  text-align:left;
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:18px;
-  padding:23px;
-  background:rgba(18,21,29,.72);
-  color:#eee;
-  cursor:pointer;
-  transition:.2s
-}
-
-.menu button:hover{
-  transform:translateY(-3px);
-  border-color:rgba(255,255,255,.2)
-}
-
-.icon{
-  font-size:27px;
-  margin-bottom:8px
-}
-
-.menu h3{
-  font-size:18px
-}
-
-.menu p{
-  font-size:12px;
-  color:#8f97a5;
-  margin-top:3px
-}
-
-.heading{
-  margin:20px 0 20px
-}
-
-.heading h2{
-  font-size:28px
-}
-
-.heading p{
-  color:#949ca9;
-  font-size:14px
-}
-
-.list{
-  display:grid;
-  gap:12px
-}
-
-.item{
-  width:100%;
-  text-align:left;
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:14px;
-  padding:18px 19px;
-  background:rgba(18,21,29,.78);
-  color:#eee;
-  cursor:pointer
-}
-
-.item:hover{
-  border-color:rgba(255,255,255,.22);
-  background:rgba(23,27,37,.9)
-}
-
-.item small{
-  display:block;
-  color:#737c8b;
-  font-size:10px;
-  letter-spacing:1.5px;
-  text-transform:uppercase
-}
-
-.item strong{
-  display:block;
-  font-size:18px;
-  margin-top:2px
-}
-
-.card{
-  background:rgba(15,18,25,.82);
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:20px;
-  padding:26px;
-  box-shadow:0 16px 45px rgba(0,0,0,.2)
-}
-
-.back{
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  margin-bottom:16px;
-  border:0;
-  background:transparent;
-  color:#aab1bd;
-  cursor:pointer;
-  padding:5px 0;
-  font-size:13px
-}
-
-.card .label{
-  color:#78818f;
-  font-size:10px;
-  letter-spacing:1.7px;
-  text-transform:uppercase
-}
-
-.card h2{
+.section-title{
   font-size:31px;
-  margin:2px 0 20px
+  margin-bottom:10px;
+}
+
+.section-description{
+  color:#969cac;
+  margin-bottom:28px;
+}
+
+/* CARDS */
+.card{
+  background:
+    linear-gradient(145deg,rgba(24,29,42,.94),rgba(13,17,27,.96));
+  border:1px solid #2b3241;
+  border-radius:22px;
+  padding:30px;
+  margin-bottom:25px;
+  box-shadow:0 15px 45px rgba(0,0,0,.25);
+}
+
+.card:hover{
+  border-color:#514b7a;
+}
+
+.category{
+  display:inline-block;
+  color:#a99aff;
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:1.5px;
+  margin-bottom:12px;
+}
+
+.card h3{
+  font-size:27px;
+  margin-bottom:20px;
 }
 
 .lyrics{
   white-space:pre-line;
-  font-size:15px;
-  line-height:2;
-  color:#e4e6ea
+  color:#e3e5ec;
+  font-size:16px;
+  line-height:1.9;
 }
 
+/* STORY */
+.story{
+  color:#c4c8d4;
+  white-space:pre-line;
+  font-size:16px;
+}
+
+/* NOTE */
+.note{
+  color:#c4c8d4;
+  padding:20px;
+  background:rgba(90,80,150,.10);
+  border-left:3px solid #8274d8;
+  border-radius:8px;
+}
+
+/* BUTTON */
 .youtube{
   display:inline-block;
-  margin-top:27px;
-  padding:11px 16px;
-  border-radius:9px;
-  background:#e21b13;
+  margin-top:25px;
+  padding:12px 20px;
+  border-radius:12px;
+  background:#b52b3b;
   color:white;
   text-decoration:none;
-  font-weight:700;
-  font-size:13px
+  font-weight:bold;
+  transition:.2s;
+}
+
+.youtube:hover{
+  transform:translateY(-2px);
+  background:#d13a4c;
 }
 
 .channel{
   display:inline-block;
-  margin-top:27px;
-  padding:11px 16px;
-  border-radius:9px;
-  background:#252a35;
-  color:#fff;
+  margin-top:15px;
+  padding:11px 18px;
+  border-radius:12px;
+  background:#242b3a;
+  color:#c7caff;
   text-decoration:none;
-  font-weight:700;
-  font-size:13px;
-  border:1px solid rgba(255,255,255,.1)
 }
 
-.prose{
-  color:#c9cdd5;
-  font-size:15px
+/* SOON */
+.soon{
+  margin-top:20px;
+  padding:15px;
+  border-radius:12px;
+  background:rgba(255,255,255,.035);
+  color:#a7adbc;
+  font-size:14px;
 }
 
-.prose p{
-  margin-bottom:18px
-}
-
-.note{
-  color:#cfd3da;
-  font-size:15px;
-  border-left:2px solid #667083;
-  padding-left:17px
-}
-
+/* FOOTER */
 footer{
+  margin-top:50px;
+  padding:45px 20px;
   text-align:center;
-  color:#6f7784;
-  font-size:12px;
-  padding:30px 15px;
-  border-top:1px solid rgba(255,255,255,.08)
+  border-top:1px solid #252b38;
+  color:#858b9b;
 }
 
-@media(max-width:650px){
+footer strong{
+  color:#ddd;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  header{
+    padding:55px 18px 35px;
+  }
+
+  header h1{
+    font-size:36px;
+  }
+
+  header p{
+    font-size:15px;
+  }
+
   nav{
-    gap:2px;
-    overflow:auto;
-    justify-content:flex-start
-  }
-
-  nav button{
-    white-space:nowrap;
-    font-size:12px;
-    padding:8px 10px
-  }
-
-  .menu{
-    grid-template-columns:1fr
+    gap:18px;
+    font-size:14px;
+    overflow-x:auto;
+    justify-content:flex-start;
+    padding-left:20px;
   }
 
   .card{
-    padding:20px;
-    border-radius:17px
+    padding:22px 18px;
+    border-radius:18px;
   }
 
-  .card h2{
-    font-size:27px
+  .section-title{
+    font-size:27px;
   }
 
-  .lyrics{
-    font-size:14px;
-    line-height:1.9
+  .card h3{
+    font-size:24px;
+  }
+
+  .lyrics,
+  .story,
+  .note{
+    font-size:15px;
   }
 }
 </style>
@@ -344,218 +277,62 @@ footer{
 
 <body>
 
-<header id="top">
-  <div class="logo">KIDI EFCI MUSIK</div>
-  <h1>RUANG KATA</h1>
-  <p>Tempat kata menjadi cerita.</p>
-  <div class="creator">ROFIKNTY</div>
+<header>
+  <h1>Ruang <span>Kata</span></h1>
+  <p>
+    Ruang untuk menyimpan lirik, cerita di balik lagu,
+    dan catatan yang lahir dari perjalanan.
+  </p>
 </header>
 
 <nav>
-  <button data-view="home" class="active">Beranda</button>
-  <button data-view="lyrics">📝 Lirik</button>
-  <button data-view="stories">📖 Cerita</button>
-  <button data-view="notes">💭 Catatan</button>
+  <a href="#beranda">Beranda</a>
+  <a href="#lirik">Lirik</a>
+  <a href="#cerita">Cerita</a>
+  <a href="#catatan">Catatan</a>
 </nav>
 
-<main>
+<main class="container">
 
-<section id="home" class="view active">
-
-  <div class="hero">
+<!-- BERANDA -->
+<section id="beranda">
+  <div class="intro">
     <h2>Selamat datang di Ruang Kata</h2>
     <p>
-      Tempat menyimpan lirik, cerita di balik lagu, dan catatan
-      dari perjalanan KIDI EFCI Musik.
+      Setiap lagu punya cerita.<br>
+      Setiap cerita menyimpan sesuatu.<br>
+      Dan setiap kata mungkin pernah kita rasakan.
     </p>
   </div>
-
-  <div class="menu">
-
-    <button onclick="showView('lyrics')">
-      <div class="icon">📝</div>
-      <h3>Daftar Lirik</h3>
-      <p>5 lagu yang tersimpan di Ruang Kata.</p>
-    </button>
-
-    <button onclick="showView('stories')">
-      <div class="icon">📖</div>
-      <h3>Cerita di Balik Lirik</h3>
-      <p>Alasan dan kisah di balik setiap lagu.</p>
-    </button>
-
-    <button onclick="showView('notes')">
-      <div class="icon">💭</div>
-      <h3>Catatan</h3>
-      <p>Pikiran dan pesan yang ditinggalkan.</p>
-    </button>
-
-  </div>
-
 </section>
 
 
-<section id="lyrics" class="view">
+<!-- LIRIK -->
+<section id="lirik">
 
-  <div class="heading">
-    <h2>📝 Daftar Lirik</h2>
-    <p>Pilih lagu untuk membaca lirik lengkapnya.</p>
-  </div>
+<h2 class="section-title">📜 Daftar Lirik</h2>
 
-  <div class="list">
-
-    <button class="item" onclick="openSong('aku-siapa')">
-      <small>Lirik #1</small>
-      <strong>Aku Siapa</strong>
-    </button>
-
-    <button class="item" onclick="openSong('sensasi')">
-      <small>Lirik #2</small>
-      <strong>Rasa Apa Ini</strong>
-    </button>
-
-    <button class="item" onclick="openSong('inviniti')">
-      <small>Lirik #3</small>
-      <strong>∞ INFINITY</strong>
-    </button>
-
-    <button class="item" onclick="openSong('lelah-kawan')">
-      <small>Lirik #4</small>
-      <strong>Lelah Kawan</strong>
-    </button>
-
-    <button class="item" onclick="openSong('dia')">
-      <small>Lirik #5</small>
-      <strong>Dia</strong>
-    </button>
-
-  </div>
-
-</section>
+<p class="section-description">
+  Kumpulan lirik yang lahir dari pikiran, pengalaman,
+  perasaan, dan hal-hal sederhana dalam perjalanan.
+</p>
 
 
-<section id="stories" class="view">
+<!-- AKU SIAPA -->
+<article class="card">
 
-  <div class="heading">
-    <h2>📖 Cerita di Balik Lirik</h2>
-    <p>Setiap lagu punya cerita.</p>
-  </div>
+<div class="category">LIRIK</div>
 
-  <div class="list">
+<h3>Aku Siapa</h3>
 
-    <button class="item" onclick="openStory('aku-siapa')">
-      <small>Cerita #1</small>
-      <strong>Aku Siapa</strong>
-    </button>
-
-    <button class="item" onclick="openStory('sensasi')">
-      <small>Cerita #2</small>
-      <strong>Rasa Apa Ini</strong>
-    </button>
-
-    <button class="item" onclick="openStory('inviniti')">
-      <small>Cerita #3</small>
-      <strong>∞ INFINITY</strong>
-    </button>
-
-    <button class="item" onclick="openStory('lelah-kawan')">
-      <small>Cerita #4</small>
-      <strong>Lelah Kawan</strong>
-    </button>
-
-    <button class="item" onclick="openStory('dia')">
-      <small>Cerita #5</small>
-      <strong>Dia</strong>
-    </button>
-
-  </div>
-
-</section>
-
-
-<section id="notes" class="view">
-
-  <div class="heading">
-    <h2>💭 Catatan</h2>
-    <p>Pikiran dan pesan yang lahir dari setiap lagu.</p>
-  </div>
-
-  <div class="list">
-
-    <button class="item" onclick="openNote('aku-siapa')">
-      <small>Catatan #1</small>
-      <strong>Aku Siapa</strong>
-    </button>
-
-    <button class="item" onclick="openNote('sensasi')">
-      <small>Catatan #2</small>
-      <strong>Rasa Apa Ini</strong>
-    </button>
-
-    <button class="item" onclick="openNote('inviniti')">
-      <small>Catatan #3</small>
-      <strong>∞ INFINITY</strong>
-    </button>
-
-    <button class="item" onclick="openNote('lelah-kawan')">
-      <small>Catatan #4</small>
-      <strong>Lelah Kawan</strong>
-    </button>
-
-    <button class="item" onclick="openNote('dia')">
-      <small>Catatan #5</small>
-      <strong>Dia</strong>
-    </button>
-
-  </div>
-
-</section>
-
-
-<section id="detail" class="view">
-
-  <button class="back" onclick="goBack()">← Kembali</button>
-
-  <div class="card">
-
-    <div id="detailLabel" class="label"></div>
-
-    <h2 id="detailTitle"></h2>
-
-    <div id="detailContent"></div>
-
-    <div id="detailLink"></div>
-
-  </div>
-
-</section>
-
-</main>
-
-
-<footer>
-  © 2026 Ruang Kata · KIDI EFCI Musik · Rofiknty
-</footer>
-
-
-<script>
-
-const channel = "https://youtube.com/@rkntykfm";
-
-const songs = {
-
-"aku-siapa": {
-
- title:"Aku Siapa",
-
- lyrics:`Kidi efci musik
+<div class="lyrics">Kidi efci musik
 balik lagi Rofi disini
 
 aku bilang aku baik baik saja
- dia bilang itu kebohongan belaka
+dia bilang itu kebohongan belaka
 Saat mengatakan aku bebas,
 dia bilang kau masih terikat belum lepas
- dua suara sinkron  tapi tak pernah selaras
+dua suara sinkron tapi tak pernah selaras
 
 satu sisi menantang Satu sisi mati
 setiap jawaban terasa seperti asumsi
@@ -566,7 +343,7 @@ Siapalah aku jika aku sendiri
 
 ketenangan terasa lebih sulit di pertahankan
 Semua hal yg ku abaikan
- kini menjadi hidup  dalam keheningan
+kini menjadi hidup dalam keheningan
 Terlalu banyak kebenaran
 dalam keheningan yg ku rasakan
 Kepercayaan diri goyah di bawah tekanan
@@ -574,24 +351,31 @@ Aku menghadapi yg tak bisa ku katakan
 
 Pikiran ku berpacu Begitu sangat cepat
 Tapi tubuhku tak bergerak diam di tempat
-selalu merasa kalau  besok masih sempat
+selalu merasa kalau besok masih sempat
 Ternyata memang aku yg gapunya niat
 
 Ponsel bersinar, tapi rasanya tidak benar.
 Tanpa tujuan tengah malam terus menggulir layar
 matahari mulai bersinar pagi telah tiba,
-tiba tiba sudah harus kembali kerja`,
+tiba tiba sudah harus kembali kerja</div>
 
- youtube:"https://youtu.be/YdADLyhKK3w"
+<a class="youtube"
+href="https://youtu.be/YdADLyhKK3w"
+target="_blank">
+▶ Dengarkan di YouTube
+</a>
 
-},
+</article>
 
 
-"sensasi": {
+<!-- SENSASI -->
+<article class="card">
 
- title:"Rasa Apa Ini",
+<div class="category">LIRIK</div>
 
- lyrics:`kidi efci musik
+<h3>Sensasi Apa Ini</h3>
+
+<div class="lyrics">Kidi efci musik
 rofi balik lagi disini
 
 Rasa ini menetap begitu sangat lama
@@ -607,7 +391,7 @@ Diakhir cerita kita tertawa bersama
 Momen momen yang sederhana
 muncul sesuatu didalam dada
 Hingga saat ini masih terasa
-Walaupun itu sudah  cukup lama
+Walaupun itu sudah cukup lama
 
 Menunggu waktu hingga bulanan
 ku nantikan hadirannya ku harapkan
@@ -615,9 +399,9 @@ Untuk dapat sebuah ketenangan
 kesempatan tak akan ku lewatkan
 
 Saat aku tak bisa menyampaikan
-Kan ku catat setiap  yg ku rasakan
+Kan ku catat setiap yg aku rasakan
 Semisal itu tentang perasaan
-Karena tentu  butuh banyak persiapan
+Karena tentu butuh banyak persiapan
 
 Melihat bahasa tubuhnya seolah bicara
 Jika aku dan dia sama satu rasa
@@ -625,31 +409,44 @@ Bagaikan suara yg memudar diudara
 Sekedar ingin tau tanpa ku usaha
 
 sedikit momen dengan nya itu sudah cukup
-Sensasi yg lama mati  kini kembali hidup
+Sensasi yg lama mati kini kembali hidup
 Sulit tuk redup yg Membuat ku gugup
- jadi pemimpin nanti apakah ku akan sanggup?
+jadi pemimpin nanti apakah ku akan sanggup?
 
 Rasa ini menetap begitu sangat lama
 Sensasi inilah mungkin yg di sebut cinta
 Karena cinta di ciptakan tuk bertahan lama
- tak bisa ku terima, aku gengsi mengakuinya`,
+tak bisa ku terima, aku gengsi mengakuinya</div>
 
- youtube:"https://youtu.be/foOm50r4ZU8?si=KdTGvno5adpo1Szi"
+<div class="soon">
+🎧 Video belum tersedia.
+<br>
+Nantikan di channel YouTube RKNTY KFM.
+</div>
 
-},
+<a class="channel"
+href="https://youtube.com/@rkntykfm"
+target="_blank">
+▶ Kunjungi Channel
+</a>
+
+</article>
 
 
-"inviniti": {
+<!-- INFINITY -->
+<article class="card">
 
- title:"∞ INFINITY",
+<div class="category">LIRIK</div>
 
- lyrics:`Kidi efci Musik
+<h3>∞ INFINITY</h3>
+
+<div class="lyrics">Kidi efci Musik
 rofi balik lagi disini
 
 Malam hari sendiri ku menik mati kopi
-kubernyanyi keheninganpun jadi tak  sunyi.
-Walau  jelek suara ini kusadari, tapi tak  peduli.
- Ini sekedar kupunya hobi.  Mungkin cuma aku yg bisa nikmati.
+kubernyanyi keheninganpun jadi tak sunyi.
+Walau jelek suara ini kusadari, tapi tak peduli.
+Ini sekedar kupunya hobi. Mungkin cuma aku yg bisa nikmati.
 
 Abaikan jika tak suka mungkin selera kita yg tak sama.
 
@@ -658,7 +455,7 @@ lewat lagu kubisa cerita.
 Meski Harus menyusun kata kata.
 Justru disitu letak asiknya.
 Asik sendiri juga tak apa
-Yang kubisa,  daripada.
+Yang kubisa, daripada.
 
 Ambisi kesenangan
 Melampaui kemampuan
@@ -668,16 +465,16 @@ Malah menambah beban.
 Jadi pendritaan.
 anggapnya cobaan
 Padahal itu balasan
-dari  yg dilakukan.
+dari yg dilakukan.
 
 Perubahan pasti ada.
 Selagi nunggu aku mencoba.
-Nikmatinya,  kutak lupa, hukum karma itu pasti ada.
-Tak mrasa menderita,  karna ku pantas mendapatkannya.
- Ketetapan dari yg maha kuasa. Sudah pasti baik tujuannya
+Nikmatinya, kutak lupa, hukum karma itu pasti ada.
+Tak mrasa menderita, karna ku pantas mendapatkannya.
+Ketetapan dari yg maha kuasa. Sudah pasti baik tujuannya
 
 tak Semuanya dalam kendali.
-Hanya  kendalikan reaksi.
+Hanya kendalikan reaksi.
 Baca segala situasi kondisi
 Dan tentukan reaksi.
 
@@ -688,7 +485,7 @@ tapi imaji ku berisi
 
 susun kata kumainkan
 Bait berbait ku lantunkan
-lewat Lagu ku  lampiaskan
+lewat Lagu ku lampiaskan
 aku bagaikan seniman
 Pendengarpun merasa heran
 laguKu jadikan lamunan
@@ -701,18 +498,31 @@ Malah menambah beban.
 Jadi pendritaan.
 anggapnya cobaan
 Padahal itu balasan
-dari  yg dilakukan`,
+dari yg dilakukan</div>
 
- youtube:"https://youtu.be/qiluIiTyk3A?si=B3F8fbsrJblJCSal"
+<div class="soon">
+🎧 Video belum tersedia.
+<br>
+Nantikan di channel YouTube RKNTY KFM.
+</div>
 
-},
+<a class="channel"
+href="https://youtube.com/@rkntykfm"
+target="_blank">
+▶ Kunjungi Channel
+</a>
+
+</article>
 
 
-"lelah-kawan": {
+<!-- LELAH KAWAN -->
+<article class="card">
 
- title:"Lelah Kawan",
+<div class="category">LIRIK</div>
 
- lyrics:`Kidi efci musik
+<h3>Lelah Kawan</h3>
+
+<div class="lyrics">Kidi efci musik
 Rofi balik lagi disini
 
 Maafkan aku teman
@@ -731,7 +541,7 @@ Kadang kadang cuma rasan rasan
 MAKA KUPILIH DIAM DAN MENDENGARKAN
 
 kau buka cerita tentang permasalahan,
- Pengalaman, atau ide suatu penemuan,
+Pengalaman, atau ide suatu penemuan,
 Kadang juga sama yg pernah kurasakan
 MAKA KUPILIH DIAM DAN MENDENGARKAN
 
@@ -741,7 +551,7 @@ Memang sedikit ku beri tanggapan
 itu buka berarti aku mengabaikan
 Bukan juga aku tak punya saran
 Ga enak jika nanti bertentangan
-Kurasa kau  sudah tau yg harus di lakukan
+Kurasa kau sudah tau yg harus di lakukan
 MAKA KUPILIH DIAM DAN MENDENGARKAN
 
 Maafkan aku teman
@@ -749,7 +559,7 @@ Sering ku mengabaikan
 Bukan ada suatu persoalan
 hanya dalam masa pemulihan
 
-Soal  ide yg telah kau temukan
+Soal ide yg telah kau temukan
 rencana menghadapi masa depan
 Kau ceritakan penuh keyakinan
 Sedikit kepala aku anggukan
@@ -771,16 +581,31 @@ cuma begini Lelahku bisa pergi
 Maafkan aku teman
 Sering ku mengabaikan
 Bukan ada suatu persoalan
-hanya dalam masa pemulihan`
+hanya dalam masa pemulihan</div>
 
-},
+<div class="soon">
+🎧 Video belum tersedia.
+<br>
+Nantikan di channel YouTube RKNTY KFM.
+</div>
+
+<a class="channel"
+href="https://youtube.com/@rkntykfm"
+target="_blank">
+▶ Kunjungi Channel
+</a>
+
+</article>
 
 
-"dia": {
+<!-- DIA -->
+<article class="card">
 
- title:"Dia",
+<div class="category">LIRIK</div>
 
- lyrics:`Kidi efci musik
+<h3>DiA</h3>
+
+<div class="lyrics">Kidi efci musik
 BALIK LAGI ROFI disini
 
 Aku hiphop, dia cerita (cie)
@@ -838,259 +663,276 @@ Lewat irama ku sampaikan semua
 
 Aku hiphop dia cerita (cie)
 Aku punya rima, dia punya warna
-Hiphop ku ini dia inspirasinya`
+Hiphop ku ini dia inspirasinya</div>
 
-}
+<div class="soon">
+🎧 Video belum tersedia.
+<br>
+Nantikan di channel YouTube RKNTY KFM.
+</div>
 
-};
+<a class="channel"
+href="https://youtube.com/@rkntykfm"
+target="_blank">
+▶ Kunjungi Channel
+</a>
 
+</article>
 
-const stories = {
+</section>
 
-"aku-siapa":`Di suatu malam yang hening, tiba-tiba muncul pikiran tentang sesuatu yang selama ini jarang terpikirkan. Sesuatu yang mungkin sering diremehkan, bahkan sengaja diabaikan, karena selalu merasa “besok masih sempat.”
 
-Tapi malam itu terasa berbeda. Dalam keheningan, banyak hal yang selama ini diabaikan justru muncul kembali. Ada begitu banyak kebenaran yang terasa ketika tidak ada lagi suara lain yang mengalihkan pikiran.
+<!-- CERITA -->
+<section id="cerita">
 
-Di situlah mulai muncul percakapan dengan diri sendiri. Mempertanyakan apa yang sebenarnya selama ini dilakukan, apa yang diabaikan, dan siapa diri sendiri ketika tidak lagi bisa menghindari apa yang ada di dalam pikiran.
+<h2 class="section-title">📖 Cerita di Balik Lirik</h2>
 
-Namun tanpa terasa, malam berlalu.
+<p class="section-description">
+  Setiap lagu punya alasan kenapa ia ditulis.
+  Di sini, cerita di balik setiap lirik disimpan.
+</p>
 
-Pagi tiba.
 
-Dan setelah semua pikiran itu muncul, kehidupan kembali berjalan seperti biasa—kembali bekerja, kembali menjalani hari.
+<article class="card">
+<div class="category">CERITA DI BALIK LIRIK</div>
+<h3>Aku Siapa</h3>
 
-Mungkin itulah yang ingin disampaikan lewat Aku Siapa: terkadang keheningan membuat kita melihat sesuatu yang selama ini kita hindari. Tapi setelah pagi datang, kita kembali sibuk dan kembali merasa bahwa besok masih sempat.`,
+<div class="story">Di malam yang hening, tiba-tiba terpikir sesuatu yang sebelumnya tidak pernah benar-benar kupikirkan.
 
-"sensasi":`Berawal dari suatu acara, kami duduk melingkar sambil mendengarkan cerita dari teman-teman yang lain. Di tengah obrolan dan canda tawa, aku dan dia beberapa kali saling bertatap mata.
+Hal-hal yang selama ini kuanggap remeh bahkan kuabaikan, karena selalu merasa besok masih sempat.
 
-Awalnya terasa biasa saja. Tapi semakin sering terjadi, ada sesuatu yang terasa berbeda. Aku sendiri sampai merasa aneh dan mulai bertanya-tanya.
+Ternyata dalam keheningan ada banyak kebenaran yang mulai terasa.
 
-Mungkin cuma kebetulan. Tapi kalau kebetulan itu berulang, masih bisa disebut kebetulan?
+Pikiran berjalan begitu cepat, sementara tubuh seolah masih diam di tempat.
 
-Acara itu akhirnya berlalu. Hari berganti hari, bahkan sudah berbulan-bulan sejak momen tersebut. Tapi entah kenapa, suatu malam aku kembali teringat pada momen itu.
+Dan tanpa terasa, pagi sudah tiba.
 
-Rasa yang ternyata masih tersimpan tersebut kemudian aku tuangkan menjadi sebuah lagu.
+Matahari mulai bersinar dan aku harus kembali bekerja.</div>
+</article>
 
-Rasa Apa Ini lahir dari sebuah momen sederhana yang mungkin terlihat biasa, tapi meninggalkan sesuatu yang belum bisa benar-benar kujelaskan.`,
 
-"inviniti":`Inviniti berawal dari sebuah malam ketika aku sedang sendiri, menikmati suasana malam sambil berada dalam keadaan yang masih terasa menekan.
+<article class="card">
+<div class="category">CERITA DI BALIK LIRIK</div>
+<h3>Sensasi Apa Ini</h3>
 
-Ada banyak hal yang sebenarnya ingin diceritakan, tapi aku nggak tahu harus cerita kepada siapa. Akhirnya, lagu menjadi tempat untuk menuangkan semuanya.
+<div class="story">Berawal dari suatu acara.
 
-Di tengah keadaan itu, aku mulai melihat kembali apa yang pernah dilakukan. Sesuatu yang dulu mungkin terasa biasa saja, ternyata kalau dilihat dari sudut pandang lain bisa menjadi sebuah kesalahan yang besar. Mungkin keadaan yang sedang dijalani sekarang adalah bagian dari konsekuensi atau karma dari apa yang pernah dilakukan.
+Kami duduk melingkar sambil mendengarkan cerita dari teman-teman yang lain.
 
-Tapi daripada terus menyesalinya, aku memilih untuk menjalaninya dan mencoba menikmatinya. Karena apa pun yang terjadi, aku percaya ada ketetapan Tuhan di dalamnya, dan apa yang ditetapkan-Nya pasti memiliki tujuan yang baik.
+Selagi mendengar, aku dan dia beberapa kali saling bertatap mata.
 
-Selagi menunggu keadaan berubah, aku harus belajar mengendalikan apa yang masih bisa kukendalikan—terutama bagaimana aku bereaksi terhadap keadaan.
+Awalnya terasa biasa.
 
-Karena mungkin bukan semua keadaan yang bisa kita pilih, tapi kita masih bisa memilih bagaimana cara menjalaninya.`,
+Namun semakin lama ada sesuatu yang berbeda. Aku sendiri merasa aneh.
 
-"lelah-kawan":`Ada masa ketika setiap pesan dan ajakan dari teman sering aku abaikan. Bukan karena ada masalah dengan mereka, bukan juga karena aku nggak menghargai mereka.
+Mungkin hanya kebetulan.
 
-Aku hanya sedang lelah.
+Tapi kalau kebetulan itu terjadi berulang kali, apakah masih bisa disebut kebetulan?
 
-Setelah seharian bekerja atau menjalani kegiatan lainnya, rasanya tenaga dan pikiran sudah nggak banyak tersisa. Ketika ada ajakan untuk ngopi, dalam pikiranku itu hanya obrolan dan ngopi biasa. Nggak ada sesuatu yang mendesak atau penting untuk disampaikan, jadi terkadang aku memilih menolak, bahkan mengabaikannya.
+Waktu terus berlalu sampai berbulan-bulan.
 
-Yang lucu, aku sendiri sebenarnya masih ngopi.
+Lalu suatu malam aku kembali teringat kejadian itu.
 
-Bukan berarti aku nggak mau bertemu atau nggak mau mendengarkan cerita mereka. Aku hanya sedang berada dalam masa pemulihan, mencoba mengembalikan tenaga dan diri sendiri.
+Dari situlah lagu ini lahir.</div>
+</article>
 
-Mungkin dari luar terlihat seperti aku mengabaikan teman. Tapi sebenarnya aku hanya sedang belajar memberi ruang untuk diri sendiri.
 
-Dan ketika akhirnya ada teman yang bercerita tentang masalah, pengalaman, atau idenya, aku lebih banyak memilih diam dan mendengarkan.
+<article class="card">
+<div class="category">CERITA DI BALIK LIRIK</div>
+<h3>∞ INFINITY</h3>
 
-Bukan karena aku nggak peduli.
+<div class="story">INFINITY berawal ketika aku sedang sendiri menikmati malam.
 
-Justru karena aku peduli, meski saat itu aku mungkin nggak punya banyak tenaga untuk berkata-kata.`,
+Keadaan saat itu masih terasa tertekan.
 
-"dia":`Aku sebenarnya tidak mengenalnya.
+Aku ingin bercerita, tetapi tidak tahu harus bercerita kepada siapa.
 
-Tapi entah kenapa, kehadirannya membuat sebuah rasa menjadi berbeda. Dan menurutku, rasa yang berbeda itu adalah sumber materi untuk berbicara—sesuatu yang bisa dituangkan menjadi kata-kata.
+Akhirnya aku memilih lagu sebagai tempat untuk bercerita.
 
-Masalahnya, justru materi yang paling ingin dibicarakan itu yang paling sulit untuk disampaikan secara langsung.
+Aku mulai melihat kembali keadaan yang sedang kujalani.
 
-Maka aku memilih cara yang lebih mudah bagiku: mencatatnya dan menyanyikannya.
+Mungkin sebagian tekanan yang kurasakan adalah karma dari sesuatu yang dulu kuanggap biasa.
 
-Lewat hip-hop, rasa yang sulit diucapkan secara langsung bisa menjadi rima, menjadi cerita, dan akhirnya menjadi sebuah lagu.
+Padahal jika dilihat dari sudut pandang lain, mungkin itu merupakan kesalahan yang besar.
 
-Bukan berarti aku tidak ingin menyampaikannya secara langsung. Hanya saja, belum waktunya. Belum ada momen yang terasa tepat.
+Jadi aku belajar untuk menikmatinya dan tidak terlalu menyesal.
 
-Tapi di sisi lain, aku juga sadar bahwa terlalu lama menunggu bisa membuat kesempatan itu hilang. Mungkin suatu hari nanti akan ada waktunya untuk menyampaikan secara langsung, atau mungkin justru tidak akan pernah ada lagi waktu itu.
+Apa pun yang datang dari Tuhan, aku percaya pasti memiliki tujuan yang baik.
 
-Untuk sementara, biarlah lagu ini menjadi perantara.
+Selagi menunggu keadaan berubah, aku harus mampu menikmati prosesnya.</div>
+</article>
 
-Karena ada rasa yang belum mampu disampaikan lewat kata-kata, tapi bisa hidup lewat sebuah lagu.`
 
-};
+<article class="card">
+<div class="category">CERITA DI BALIK LIRIK</div>
+<h3>Lelah Kawan</h3>
 
+<div class="story">Maafkan aku teman.
 
-const notes = {
+Kadang setiap pesan dan setiap ajakan sering kuabaikan.
 
-"aku-siapa":`Sia-sia ketika pikiranmu penuh strategi, namun langkah masih berhenti.
+Bukan karena ada masalah dengan kalian.
 
-Terlalu banyak berpikir tentang apa yang harus dilakukan tidak akan berarti jika tidak pernah benar-benar mengambil langkah.`,
+Aku hanya lelah.
 
-"sensasi":`Terkadang sesuatu yang sederhana bisa meninggalkan rasa yang luar biasa. Kita tidak selalu harus buru-buru memberi nama pada sebuah perasaan. Nikmati saja proses mengenalinya, karena mungkin justru ketidakpastian itulah yang membuatnya terasa berbeda.`,
+Lelah setelah bekerja seharian atau melakukan kegiatan lainnya.
 
-"inviniti":`Jangan anggap semua tekanan adalah cobaan. Mungkin itu adalah hasil dari perbuatanmu sendiri.
+Ketika ada ajakan ngopi, dalam pikiranku itu hanya obrolan biasa dan tidak ada sesuatu yang mendesak atau penting untuk disampaikan.
 
-Tidak semua kesulitan datang untuk menguji kita. Ada kalanya keadaan sulit hadir sebagai konsekuensi dari pilihan yang pernah kita ambil.`,
+Karena itu kadang aku menolak atau bahkan mengabaikannya.
 
-"lelah-kawan":`Ada kalanya menjauh bukan berarti tidak peduli. Kita semua punya batas tenaga. Jika tubuh dan pikiran sedang lelah, mengambil waktu untuk diam dan memulihkan diri bukan berarti meninggalkan orang-orang yang kita sayangi.
+Padahal aku sendiri masih ngopi.
 
-Kadang kita hanya perlu berhenti sebentar agar bisa kembali menjadi diri sendiri.`,
+Aku hanya sedang berada dalam masa pemulihan.
 
-"dia":`Tidak semua rasa harus segera disampaikan. Ada yang untuk sementara cukup ditulis, dinyanyikan, dan disimpan sebagai sebuah cerita.
+Kadang diam bukan berarti tidak peduli.
 
-Tapi jangan sampai terlalu lama menunggu momen yang sempurna, karena terkadang kesempatan tidak datang dua kali.`
+Kadang aku hanya sedang mencoba mengembalikan tenaga.</div>
+</article>
 
-};
 
+<article class="card">
+<div class="category">CERITA DI BALIK LIRIK</div>
+<h3>DiA</h3>
 
-const titles = {
+<div class="story">Dia bukan seseorang yang benar-benar aku kenal dekat.
 
-"aku-siapa":"Aku Siapa",
-"sensasi":"Rasa Apa Ini",
-"inviniti":"∞ INFINITY",
-"lelah-kawan":"Lelah Kawan",
-"dia":"Dia"
+Hanya saja, kehadirannya membuat sebuah rasa menjadi berbeda.
 
-};
+Menurutku, rasa yang berbeda adalah sumber materi untuk berbicara.
 
+Namun materi itu justru sangat sulit dibicarakan secara langsung.
 
-function showView(id){
+Lebih mudah bagiku untuk mencatatnya lalu menyanyikannya.
 
-  document.querySelectorAll(".view")
-    .forEach(v=>v.classList.remove("active"));
+Secara langsung belum waktunya, karena momennya belum terasa pas.
 
-  document.getElementById(id)
-    .classList.add("active");
+Walaupun aku sadar, mungkin tidak akan ada waktu jika terlalu lama menunggu waktu yang tepat.
 
-  document.querySelectorAll("nav button")
-    .forEach(b=>
-      b.classList.toggle(
-        "active",
-        b.dataset.view===id
-      )
-    );
+Untuk sementara, hiphop menjadi perantara.</div>
+</article>
 
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
+</section>
 
-}
 
+<!-- CATATAN -->
+<section id="catatan">
 
-document.querySelectorAll("nav button")
-.forEach(b=>
-  b.addEventListener(
-    "click",
-    ()=>showView(b.dataset.view)
-  )
-);
+<h2 class="section-title">💭 Catatan</h2>
 
+<p class="section-description">
+  Pikiran, pesan, dan hal-hal yang ingin ditinggalkan
+  bersama setiap lagu.
+</p>
 
-let previousView="lyrics";
 
+<article class="card">
+<div class="category">CATATAN</div>
+<h3>Aku Siapa</h3>
+<div class="note">
+Intinya sederhana:<br><br>
+<strong>Sia-sia ketika pikiranmu penuh strategi,
+namun langkah masih berhenti.</strong>
+</div>
+</article>
 
-function openSong(key){
 
-  previousView="lyrics";
+<article class="card">
+<div class="category">CATATAN</div>
+<h3>Sensasi Apa Ini</h3>
+<div class="note">
+Kadang sebuah rasa muncul tanpa direncanakan.
+Tidak semua hal harus langsung disampaikan.
+Ada rasa yang untuk sementara cukup dicatat,
+dipahami, dan dibiarkan menemukan waktunya sendiri.
+</div>
+</article>
 
-  document.getElementById("detailLabel")
-    .textContent="LIRIK";
 
-  document.getElementById("detailTitle")
-    .textContent=titles[key];
+<article class="card">
+<div class="category">CATATAN</div>
+<h3>∞ INFINITY</h3>
+<div class="note">
+Jangan menganggap semua tekanan adalah cobaan.
 
-  document.getElementById("detailContent")
-    .innerHTML='<div class="lyrics"></div>';
+Mungkin sebagian tekanan merupakan hasil dari
+perbuatan kita sendiri.
 
-  document.querySelector("#detailContent .lyrics")
-    .textContent=songs[key].lyrics;
+Belajar menerima bukan berarti menyerah.
+Kadang kita hanya perlu menjalani,
+menikmati proses,
+dan tetap percaya bahwa setiap ketetapan Tuhan
+pasti memiliki tujuan yang baik.
+</div>
+</article>
 
-  document.getElementById("detailLink")
-    .innerHTML = songs[key].youtube
 
-    ? `<a class="youtube"
-        href="${songs[key].youtube}"
-        target="_blank"
-        rel="noopener noreferrer">
-        ▶ Dengarkan di YouTube
-       </a>`
+<article class="card">
+<div class="category">CATATAN</div>
+<h3>Lelah Kawan</h3>
+<div class="note">
+Kadang diam bukan berarti tidak peduli.
 
-    : `<a class="channel"
-        href="${channel}"
-        target="_blank"
-        rel="noopener noreferrer">
-        🔔 Subscribe & Nantikan di Channel
-       </a>`;
+Ada saatnya seseorang hanya terlalu lelah
+untuk menjelaskan apa yang sedang terjadi.
 
-  showView("detail");
+Tidak semua ajakan yang ditolak berarti tidak menghargai.
+Terkadang seseorang memang sedang membutuhkan
+waktu untuk memulihkan dirinya sendiri.
+</div>
+</article>
 
-}
 
+<article class="card">
+<div class="category">CATATAN</div>
+<h3>DiA</h3>
+<div class="note">
+Ada perasaan yang lebih mudah ditulis
+daripada diucapkan.
 
-function openStory(key){
+Ada sesuatu yang belum waktunya disampaikan,
+bukan karena tidak ingin,
+tetapi karena momennya belum tepat.
 
-  previousView="stories";
+Untuk sementara,
+biarkan lagu menjadi perantara.
+</div>
+</article>
 
-  document.getElementById("detailLabel")
-    .textContent="CERITA DI BALIK LIRIK";
+</section>
 
-  document.getElementById("detailTitle")
-    .textContent=titles[key];
+</main>
 
-  document.getElementById("detailContent")
-    .innerHTML=
-      `<div class="prose">
-        ${stories[key]
-          .split("\n\n")
-          .map(p=>`<p>${p}</p>`)
-          .join("")}
-       </div>`;
 
-  document.getElementById("detailLink")
-    .innerHTML="";
+<footer>
 
-  showView("detail");
+<p>
+<strong>Ruang Kata</strong> — Rofiknty
+</p>
 
-}
+<p>
+Lirik • Cerita • Catatan
+</p>
 
+<p style="margin-top:12px;">
+🎵 Nantikan karya berikutnya di YouTube
+</p>
 
-function openNote(key){
+<a class="channel"
+href="https://youtube.com/@rkntykfm"
+target="_blank">
+▶ Subscribe Channel RKNTY KFM
+</a>
 
-  previousView="notes";
+</footer>
 
-  document.getElementById("detailLabel")
-    .textContent="CATATAN";
 
-  document.getElementById("detailTitle")
-    .textContent=titles[key];
-
-  document.getElementById("detailContent")
-    .innerHTML=
-      `<div class="note">
-        ${notes[key]
-          .split("\n\n")
-          .map(p=>`<p>${p}</p>`)
-          .join("")}
-       </div>`;
-
-  document.getElementById("detailLink")
-    .innerHTML="";
-
-  showView("detail");
-
-}
-
-
-function goBack(){
-  showView(previousView);
-}
-
+<!-- Cloudflare Web Analytics -->
+<script type='module'
+src='https://static.cloudflareinsights.com/beacon.min.js'
+data-cf-beacon='{"token": "a3f7a148b3814c5a8938040871616ec8"}'>
 </script>
+<!-- End Cloudflare Web Analytics -->
 
 </body>
 </html>
