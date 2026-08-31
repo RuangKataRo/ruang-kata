@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ruang Kata — lirik, cerita di balik lirik, dan catatan KIDI EFCI Musik.">
+<meta name="description" content="Ruang Kata — lirik, cerita di balik lirik, dan catatan KIDI EFCI Musik oleh Rofiknty.">
 <title>Ruang Kata — KIDI EFCI Musik</title>
 
 <style>
@@ -13,9 +13,9 @@ body{
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   color:#eee;
   background:
-    radial-gradient(circle at 15% 10%, rgba(91,104,145,.22), transparent 28%),
-    radial-gradient(circle at 85% 25%, rgba(116,82,130,.18), transparent 30%),
-    radial-gradient(circle at 50% 90%, rgba(58,82,100,.16), transparent 35%),
+    radial-gradient(circle at 15% 10%,rgba(91,104,145,.22),transparent 28%),
+    radial-gradient(circle at 85% 25%,rgba(116,82,130,.18),transparent 30%),
+    radial-gradient(circle at 50% 90%,rgba(58,82,100,.16),transparent 35%),
     linear-gradient(135deg,#07090d,#10131b 48%,#080a0e);
   background-attachment:fixed;
   line-height:1.75;
@@ -23,108 +23,332 @@ body{
 }
 body:before{
   content:"";
-  position:fixed;inset:0;pointer-events:none;opacity:.16;
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.16;
   background-image:
     linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
     linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
   background-size:42px 42px;
 }
 a{color:inherit}
+
 header{
-  position:relative;text-align:center;padding:72px 18px 55px;
+  position:relative;
+  text-align:center;
+  padding:72px 18px 55px;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
+
 .logo{
-  display:inline-block;font-size:13px;letter-spacing:5px;color:#aeb5c4;
+  display:inline-block;
+  font-size:13px;
+  letter-spacing:5px;
+  color:#aeb5c4;
   margin-bottom:10px
 }
-header h1{font-size:clamp(38px,9vw,66px);letter-spacing:3px;font-weight:800}
-header p{margin-top:8px;color:#9da4b1;font-size:15px}
+
+header h1{
+  font-size:clamp(38px,9vw,66px);
+  letter-spacing:3px;
+  font-weight:800
+}
+
+header p{
+  margin-top:8px;
+  color:#9da4b1;
+  font-size:15px
+}
+
+.creator{
+  margin-top:12px;
+  font-size:13px;
+  color:#737c8b;
+  letter-spacing:2px;
+}
+
 nav{
-  position:sticky;top:0;z-index:20;
-  background:rgba(7,9,13,.86);backdrop-filter:blur(16px);
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(7,9,13,.86);
+  backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(255,255,255,.08);
-  display:flex;justify-content:center;gap:6px;padding:10px;
+  display:flex;
+  justify-content:center;
+  gap:6px;
+  padding:10px;
 }
+
 nav button{
-  border:0;background:transparent;color:#aeb4c0;padding:9px 13px;
-  border-radius:9px;font-size:13px;cursor:pointer
+  border:0;
+  background:transparent;
+  color:#aeb4c0;
+  padding:9px 13px;
+  border-radius:9px;
+  font-size:13px;
+  cursor:pointer
 }
-nav button:hover,nav button.active{background:rgba(255,255,255,.08);color:#fff}
-main{width:min(920px,100%);margin:auto;padding:30px 16px 70px}
-.view{display:none;animation:fade .25s ease}
-.view.active{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
-.hero{text-align:center;padding:35px 10px 25px}
-.hero h2{font-size:clamp(25px,6vw,38px);margin-bottom:12px}
-.hero p{max-width:650px;margin:auto;color:#a4abb7}
+
+nav button:hover,
+nav button.active{
+  background:rgba(255,255,255,.08);
+  color:#fff
+}
+
+main{
+  width:min(920px,100%);
+  margin:auto;
+  padding:30px 16px 70px
+}
+
+.view{
+  display:none;
+  animation:fade .25s ease
+}
+
+.view.active{
+  display:block
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(5px)}
+  to{opacity:1;transform:none}
+}
+
+.hero{
+  text-align:center;
+  padding:35px 10px 25px
+}
+
+.hero h2{
+  font-size:clamp(25px,6vw,38px);
+  margin-bottom:12px
+}
+
+.hero p{
+  max-width:650px;
+  margin:auto;
+  color:#a4abb7
+}
+
 .menu{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 12px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin:30px 0 12px
 }
+
 .menu button{
-  text-align:left;border:1px solid rgba(255,255,255,.09);
-  border-radius:18px;padding:23px;background:rgba(18,21,29,.72);
-  color:#eee;cursor:pointer;transition:.2s
+  text-align:left;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:18px;
+  padding:23px;
+  background:rgba(18,21,29,.72);
+  color:#eee;
+  cursor:pointer;
+  transition:.2s
 }
-.menu button:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.2)}
-.icon{font-size:27px;margin-bottom:8px}
-.menu h3{font-size:18px}.menu p{font-size:12px;color:#8f97a5;margin-top:3px}
-.heading{margin:20px 0 20px}
-.heading h2{font-size:28px}.heading p{color:#949ca9;font-size:14px}
-.list{display:grid;gap:12px}
+
+.menu button:hover{
+  transform:translateY(-3px);
+  border-color:rgba(255,255,255,.2)
+}
+
+.icon{
+  font-size:27px;
+  margin-bottom:8px
+}
+
+.menu h3{
+  font-size:18px
+}
+
+.menu p{
+  font-size:12px;
+  color:#8f97a5;
+  margin-top:3px
+}
+
+.heading{
+  margin:20px 0 20px
+}
+
+.heading h2{
+  font-size:28px
+}
+
+.heading p{
+  color:#949ca9;
+  font-size:14px
+}
+
+.list{
+  display:grid;
+  gap:12px
+}
+
 .item{
-  width:100%;text-align:left;border:1px solid rgba(255,255,255,.09);
-  border-radius:14px;padding:18px 19px;background:rgba(18,21,29,.78);
-  color:#eee;cursor:pointer
+  width:100%;
+  text-align:left;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:14px;
+  padding:18px 19px;
+  background:rgba(18,21,29,.78);
+  color:#eee;
+  cursor:pointer
 }
-.item:hover{border-color:rgba(255,255,255,.22);background:rgba(23,27,37,.9)}
-.item small{display:block;color:#737c8b;font-size:10px;letter-spacing:1.5px;text-transform:uppercase}
-.item strong{display:block;font-size:18px;margin-top:2px}
+
+.item:hover{
+  border-color:rgba(255,255,255,.22);
+  background:rgba(23,27,37,.9)
+}
+
+.item small{
+  display:block;
+  color:#737c8b;
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase
+}
+
+.item strong{
+  display:block;
+  font-size:18px;
+  margin-top:2px
+}
+
 .card{
   background:rgba(15,18,25,.82);
   border:1px solid rgba(255,255,255,.09);
-  border-radius:20px;padding:26px;
+  border-radius:20px;
+  padding:26px;
   box-shadow:0 16px 45px rgba(0,0,0,.2)
 }
+
 .back{
-  display:inline-flex;align-items:center;gap:7px;
-  margin-bottom:16px;border:0;background:transparent;color:#aab1bd;
-  cursor:pointer;padding:5px 0;font-size:13px
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-bottom:16px;
+  border:0;
+  background:transparent;
+  color:#aab1bd;
+  cursor:pointer;
+  padding:5px 0;
+  font-size:13px
 }
-.card .label{color:#78818f;font-size:10px;letter-spacing:1.7px;text-transform:uppercase}
-.card h2{font-size:31px;margin:2px 0 20px}
-.lyrics{white-space:pre-line;font-size:15px;line-height:2;color:#e4e6ea}
+
+.card .label{
+  color:#78818f;
+  font-size:10px;
+  letter-spacing:1.7px;
+  text-transform:uppercase
+}
+
+.card h2{
+  font-size:31px;
+  margin:2px 0 20px
+}
+
+.lyrics{
+  white-space:pre-line;
+  font-size:15px;
+  line-height:2;
+  color:#e4e6ea
+}
+
 .youtube{
-  display:inline-block;margin-top:27px;padding:11px 16px;border-radius:9px;
-  background:#e21b13;color:white;text-decoration:none;font-weight:700;font-size:13px
+  display:inline-block;
+  margin-top:27px;
+  padding:11px 16px;
+  border-radius:9px;
+  background:#e21b13;
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  font-size:13px
 }
+
 .channel{
-  display:inline-block;margin-top:27px;padding:11px 16px;border-radius:9px;
-  background:#252a35;color:#fff;text-decoration:none;font-weight:700;font-size:13px;
+  display:inline-block;
+  margin-top:27px;
+  padding:11px 16px;
+  border-radius:9px;
+  background:#252a35;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  font-size:13px;
   border:1px solid rgba(255,255,255,.1)
 }
-.prose{color:#c9cdd5;font-size:15px}
-.prose p{margin-bottom:18px}
-.note{
-  color:#cfd3da;font-size:15px;border-left:2px solid #667083;padding-left:17px
+
+.prose{
+  color:#c9cdd5;
+  font-size:15px
 }
-footer{text-align:center;color:#6f7784;font-size:12px;padding:30px 15px;border-top:1px solid rgba(255,255,255,.08)}
+
+.prose p{
+  margin-bottom:18px
+}
+
+.note{
+  color:#cfd3da;
+  font-size:15px;
+  border-left:2px solid #667083;
+  padding-left:17px
+}
+
+footer{
+  text-align:center;
+  color:#6f7784;
+  font-size:12px;
+  padding:30px 15px;
+  border-top:1px solid rgba(255,255,255,.08)
+}
+
 @media(max-width:650px){
-  nav{gap:2px;overflow:auto;justify-content:flex-start}
-  nav button{white-space:nowrap;font-size:12px;padding:8px 10px}
-  .menu{grid-template-columns:1fr}
-  .card{padding:20px;border-radius:17px}
-  .card h2{font-size:27px}
-  .lyrics{font-size:14px;line-height:1.9}
+  nav{
+    gap:2px;
+    overflow:auto;
+    justify-content:flex-start
+  }
+
+  nav button{
+    white-space:nowrap;
+    font-size:12px;
+    padding:8px 10px
+  }
+
+  .menu{
+    grid-template-columns:1fr
+  }
+
+  .card{
+    padding:20px;
+    border-radius:17px
+  }
+
+  .card h2{
+    font-size:27px
+  }
+
+  .lyrics{
+    font-size:14px;
+    line-height:1.9
+  }
 }
 </style>
 </head>
 
 <body>
+
 <header id="top">
   <div class="logo">KIDI EFCI MUSIK</div>
   <h1>RUANG KATA</h1>
   <p>Tempat kata menjadi cerita.</p>
+  <div class="creator">ROFIKNTY</div>
 </header>
 
 <nav>
@@ -137,6 +361,7 @@ footer{text-align:center;color:#6f7784;font-size:12px;padding:30px 15px;border-t
 <main>
 
 <section id="home" class="view active">
+
   <div class="hero">
     <h2>Selamat datang di Ruang Kata</h2>
     <p>
@@ -144,66 +369,185 @@ footer{text-align:center;color:#6f7784;font-size:12px;padding:30px 15px;border-t
       dari perjalanan KIDI EFCI Musik.
     </p>
   </div>
+
   <div class="menu">
-    <button onclick="showView('lyrics')"><div class="icon">📝</div><h3>Daftar Lirik</h3><p>5 lagu yang tersimpan di Ruang Kata.</p></button>
-    <button onclick="showView('stories')"><div class="icon">📖</div><h3>Cerita di Balik Lirik</h3><p>Alasan dan kisah di balik setiap lagu.</p></button>
-    <button onclick="showView('notes')"><div class="icon">💭</div><h3>Catatan</h3><p>Pikiran dan pesan yang ditinggalkan.</p></button>
+
+    <button onclick="showView('lyrics')">
+      <div class="icon">📝</div>
+      <h3>Daftar Lirik</h3>
+      <p>5 lagu yang tersimpan di Ruang Kata.</p>
+    </button>
+
+    <button onclick="showView('stories')">
+      <div class="icon">📖</div>
+      <h3>Cerita di Balik Lirik</h3>
+      <p>Alasan dan kisah di balik setiap lagu.</p>
+    </button>
+
+    <button onclick="showView('notes')">
+      <div class="icon">💭</div>
+      <h3>Catatan</h3>
+      <p>Pikiran dan pesan yang ditinggalkan.</p>
+    </button>
+
   </div>
+
 </section>
+
 
 <section id="lyrics" class="view">
-  <div class="heading"><h2>📝 Daftar Lirik</h2><p>Pilih lagu untuk membaca lirik lengkapnya.</p></div>
-  <div class="list">
-    <button class="item" onclick="openSong('aku-siapa')"><small>Lirik #1</small><strong>Aku Siapa</strong></button>
-    <button class="item" onclick="openSong('sensasi')"><small>Lirik #2</small><strong>Sensasi Apa Ini</strong></button>
-    <button class="item" onclick="openSong('inviniti')"><small>Lirik #3</small><strong>Inviniti</strong></button>
-    <button class="item" onclick="openSong('lelah-kawan')"><small>Lirik #4</small><strong>Lelah Kawan</strong></button>
-    <button class="item" onclick="openSong('dia')"><small>Lirik #5</small><strong>Dia</strong></button>
+
+  <div class="heading">
+    <h2>📝 Daftar Lirik</h2>
+    <p>Pilih lagu untuk membaca lirik lengkapnya.</p>
   </div>
+
+  <div class="list">
+
+    <button class="item" onclick="openSong('aku-siapa')">
+      <small>Lirik #1</small>
+      <strong>Aku Siapa</strong>
+    </button>
+
+    <button class="item" onclick="openSong('sensasi')">
+      <small>Lirik #2</small>
+      <strong>Rasa Apa Ini</strong>
+    </button>
+
+    <button class="item" onclick="openSong('inviniti')">
+      <small>Lirik #3</small>
+      <strong>∞ INFINITY</strong>
+    </button>
+
+    <button class="item" onclick="openSong('lelah-kawan')">
+      <small>Lirik #4</small>
+      <strong>Lelah Kawan</strong>
+    </button>
+
+    <button class="item" onclick="openSong('dia')">
+      <small>Lirik #5</small>
+      <strong>Dia</strong>
+    </button>
+
+  </div>
+
 </section>
+
 
 <section id="stories" class="view">
-  <div class="heading"><h2>📖 Cerita di Balik Lirik</h2><p>Setiap lagu punya cerita.</p></div>
-  <div class="list">
-    <button class="item" onclick="openStory('aku-siapa')"><small>Cerita #1</small><strong>Aku Siapa</strong></button>
-    <button class="item" onclick="openStory('sensasi')"><small>Cerita #2</small><strong>Sensasi Apa Ini</strong></button>
-    <button class="item" onclick="openStory('inviniti')"><small>Cerita #3</small><strong>Inviniti</strong></button>
-    <button class="item" onclick="openStory('lelah-kawan')"><small>Cerita #4</small><strong>Lelah Kawan</strong></button>
-    <button class="item" onclick="openStory('dia')"><small>Cerita #5</small><strong>Dia</strong></button>
+
+  <div class="heading">
+    <h2>📖 Cerita di Balik Lirik</h2>
+    <p>Setiap lagu punya cerita.</p>
   </div>
+
+  <div class="list">
+
+    <button class="item" onclick="openStory('aku-siapa')">
+      <small>Cerita #1</small>
+      <strong>Aku Siapa</strong>
+    </button>
+
+    <button class="item" onclick="openStory('sensasi')">
+      <small>Cerita #2</small>
+      <strong>Rasa Apa Ini</strong>
+    </button>
+
+    <button class="item" onclick="openStory('inviniti')">
+      <small>Cerita #3</small>
+      <strong>∞ INFINITY</strong>
+    </button>
+
+    <button class="item" onclick="openStory('lelah-kawan')">
+      <small>Cerita #4</small>
+      <strong>Lelah Kawan</strong>
+    </button>
+
+    <button class="item" onclick="openStory('dia')">
+      <small>Cerita #5</small>
+      <strong>Dia</strong>
+    </button>
+
+  </div>
+
 </section>
+
 
 <section id="notes" class="view">
-  <div class="heading"><h2>💭 Catatan</h2><p>Pikiran dan pesan yang lahir dari setiap lagu.</p></div>
-  <div class="list">
-    <button class="item" onclick="openNote('aku-siapa')"><small>Catatan #1</small><strong>Aku Siapa</strong></button>
-    <button class="item" onclick="openNote('sensasi')"><small>Catatan #2</small><strong>Sensasi Apa Ini</strong></button>
-    <button class="item" onclick="openNote('inviniti')"><small>Catatan #3</small><strong>Inviniti</strong></button>
-    <button class="item" onclick="openNote('lelah-kawan')"><small>Catatan #4</small><strong>Lelah Kawan</strong></button>
-    <button class="item" onclick="openNote('dia')"><small>Catatan #5</small><strong>Dia</strong></button>
+
+  <div class="heading">
+    <h2>💭 Catatan</h2>
+    <p>Pikiran dan pesan yang lahir dari setiap lagu.</p>
   </div>
+
+  <div class="list">
+
+    <button class="item" onclick="openNote('aku-siapa')">
+      <small>Catatan #1</small>
+      <strong>Aku Siapa</strong>
+    </button>
+
+    <button class="item" onclick="openNote('sensasi')">
+      <small>Catatan #2</small>
+      <strong>Rasa Apa Ini</strong>
+    </button>
+
+    <button class="item" onclick="openNote('inviniti')">
+      <small>Catatan #3</small>
+      <strong>∞ INFINITY</strong>
+    </button>
+
+    <button class="item" onclick="openNote('lelah-kawan')">
+      <small>Catatan #4</small>
+      <strong>Lelah Kawan</strong>
+    </button>
+
+    <button class="item" onclick="openNote('dia')">
+      <small>Catatan #5</small>
+      <strong>Dia</strong>
+    </button>
+
+  </div>
+
 </section>
 
+
 <section id="detail" class="view">
+
   <button class="back" onclick="goBack()">← Kembali</button>
+
   <div class="card">
+
     <div id="detailLabel" class="label"></div>
+
     <h2 id="detailTitle"></h2>
+
     <div id="detailContent"></div>
+
     <div id="detailLink"></div>
+
   </div>
+
 </section>
 
 </main>
 
-<footer>© 2026 Ruang Kata · KIDI EFCI Musik</footer>
+
+<footer>
+  © 2026 Ruang Kata · KIDI EFCI Musik · Rofiknty
+</footer>
+
 
 <script>
+
 const channel = "https://youtube.com/@rkntykfm";
 
 const songs = {
+
 "aku-siapa": {
+
  title:"Aku Siapa",
+
  lyrics:`Kidi efci musik
 balik lagi Rofi disini
 
@@ -237,10 +581,16 @@ Ponsel bersinar, tapi rasanya tidak benar.
 Tanpa tujuan tengah malam terus menggulir layar
 matahari mulai bersinar pagi telah tiba,
 tiba tiba sudah harus kembali kerja`,
+
  youtube:"https://youtu.be/YdADLyhKK3w"
+
 },
+
+
 "sensasi": {
- title:"Sensasi Apa Ini",
+
+ title:"Rasa Apa Ini",
+
  lyrics:`kidi efci musik
 rofi balik lagi disini
 
@@ -265,7 +615,7 @@ Untuk dapat sebuah ketenangan
 kesempatan tak akan ku lewatkan
 
 Saat aku tak bisa menyampaikan
-Kan ku catat setiap  yg aku rasakan
+Kan ku catat setiap  yg ku rasakan
 Semisal itu tentang perasaan
 Karena tentu  butuh banyak persiapan
 
@@ -282,10 +632,17 @@ Sulit tuk redup yg Membuat ku gugup
 Rasa ini menetap begitu sangat lama
 Sensasi inilah mungkin yg di sebut cinta
 Karena cinta di ciptakan tuk bertahan lama
- tak bisa ku terima, aku gengsi mengakuinya`
+ tak bisa ku terima, aku gengsi mengakuinya`,
+
+ youtube:"https://youtu.be/foOm50r4ZU8?si=KdTGvno5adpo1Szi"
+
 },
+
+
 "inviniti": {
- title:"Inviniti",
+
+ title:"∞ INFINITY",
+
  lyrics:`Kidi efci Musik
 rofi balik lagi disini
 
@@ -344,10 +701,17 @@ Malah menambah beban.
 Jadi pendritaan.
 anggapnya cobaan
 Padahal itu balasan
-dari  yg dilakukan`
+dari  yg dilakukan`,
+
+ youtube:"https://youtu.be/qiluIiTyk3A?si=B3F8fbsrJblJCSal"
+
 },
+
+
 "lelah-kawan": {
+
  title:"Lelah Kawan",
+
  lyrics:`Kidi efci musik
 Rofi balik lagi disini
 
@@ -408,9 +772,14 @@ Maafkan aku teman
 Sering ku mengabaikan
 Bukan ada suatu persoalan
 hanya dalam masa pemulihan`
+
 },
+
+
 "dia": {
+
  title:"Dia",
+
  lyrics:`Kidi efci musik
 BALIK LAGI ROFI disini
 
@@ -470,10 +839,14 @@ Lewat irama ku sampaikan semua
 Aku hiphop dia cerita (cie)
 Aku punya rima, dia punya warna
 Hiphop ku ini dia inspirasinya`
+
 }
+
 };
 
+
 const stories = {
+
 "aku-siapa":`Di suatu malam yang hening, tiba-tiba muncul pikiran tentang sesuatu yang selama ini jarang terpikirkan. Sesuatu yang mungkin sering diremehkan, bahkan sengaja diabaikan, karena selalu merasa “besok masih sempat.”
 
 Tapi malam itu terasa berbeda. Dalam keheningan, banyak hal yang selama ini diabaikan justru muncul kembali. Ada begitu banyak kebenaran yang terasa ketika tidak ada lagi suara lain yang mengalihkan pikiran.
@@ -487,6 +860,7 @@ Pagi tiba.
 Dan setelah semua pikiran itu muncul, kehidupan kembali berjalan seperti biasa—kembali bekerja, kembali menjalani hari.
 
 Mungkin itulah yang ingin disampaikan lewat Aku Siapa: terkadang keheningan membuat kita melihat sesuatu yang selama ini kita hindari. Tapi setelah pagi datang, kita kembali sibuk dan kembali merasa bahwa besok masih sempat.`,
+
 "sensasi":`Berawal dari suatu acara, kami duduk melingkar sambil mendengarkan cerita dari teman-teman yang lain. Di tengah obrolan dan canda tawa, aku dan dia beberapa kali saling bertatap mata.
 
 Awalnya terasa biasa saja. Tapi semakin sering terjadi, ada sesuatu yang terasa berbeda. Aku sendiri sampai merasa aneh dan mulai bertanya-tanya.
@@ -497,7 +871,8 @@ Acara itu akhirnya berlalu. Hari berganti hari, bahkan sudah berbulan-bulan seja
 
 Rasa yang ternyata masih tersimpan tersebut kemudian aku tuangkan menjadi sebuah lagu.
 
-Sensasi Apa Ini lahir dari sebuah momen sederhana yang mungkin terlihat biasa, tapi meninggalkan sesuatu yang belum bisa benar-benar kujelaskan.`,
+Rasa Apa Ini lahir dari sebuah momen sederhana yang mungkin terlihat biasa, tapi meninggalkan sesuatu yang belum bisa benar-benar kujelaskan.`,
+
 "inviniti":`Inviniti berawal dari sebuah malam ketika aku sedang sendiri, menikmati suasana malam sambil berada dalam keadaan yang masih terasa menekan.
 
 Ada banyak hal yang sebenarnya ingin diceritakan, tapi aku nggak tahu harus cerita kepada siapa. Akhirnya, lagu menjadi tempat untuk menuangkan semuanya.
@@ -509,6 +884,7 @@ Tapi daripada terus menyesalinya, aku memilih untuk menjalaninya dan mencoba men
 Selagi menunggu keadaan berubah, aku harus belajar mengendalikan apa yang masih bisa kukendalikan—terutama bagaimana aku bereaksi terhadap keadaan.
 
 Karena mungkin bukan semua keadaan yang bisa kita pilih, tapi kita masih bisa memilih bagaimana cara menjalaninya.`,
+
 "lelah-kawan":`Ada masa ketika setiap pesan dan ajakan dari teman sering aku abaikan. Bukan karena ada masalah dengan mereka, bukan juga karena aku nggak menghargai mereka.
 
 Aku hanya sedang lelah.
@@ -526,6 +902,7 @@ Dan ketika akhirnya ada teman yang bercerita tentang masalah, pengalaman, atau i
 Bukan karena aku nggak peduli.
 
 Justru karena aku peduli, meski saat itu aku mungkin nggak punya banyak tenaga untuk berkata-kata.`,
+
 "dia":`Aku sebenarnya tidak mengenalnya.
 
 Tapi entah kenapa, kehadirannya membuat sebuah rasa menjadi berbeda. Dan menurutku, rasa yang berbeda itu adalah sumber materi untuk berbicara—sesuatu yang bisa dituangkan menjadi kata-kata.
@@ -543,66 +920,177 @@ Tapi di sisi lain, aku juga sadar bahwa terlalu lama menunggu bisa membuat kesem
 Untuk sementara, biarlah lagu ini menjadi perantara.
 
 Karena ada rasa yang belum mampu disampaikan lewat kata-kata, tapi bisa hidup lewat sebuah lagu.`
+
 };
 
+
 const notes = {
+
 "aku-siapa":`Sia-sia ketika pikiranmu penuh strategi, namun langkah masih berhenti.
 
 Terlalu banyak berpikir tentang apa yang harus dilakukan tidak akan berarti jika tidak pernah benar-benar mengambil langkah.`,
+
 "sensasi":`Terkadang sesuatu yang sederhana bisa meninggalkan rasa yang luar biasa. Kita tidak selalu harus buru-buru memberi nama pada sebuah perasaan. Nikmati saja proses mengenalinya, karena mungkin justru ketidakpastian itulah yang membuatnya terasa berbeda.`,
+
 "inviniti":`Jangan anggap semua tekanan adalah cobaan. Mungkin itu adalah hasil dari perbuatanmu sendiri.
 
 Tidak semua kesulitan datang untuk menguji kita. Ada kalanya keadaan sulit hadir sebagai konsekuensi dari pilihan yang pernah kita ambil.`,
+
 "lelah-kawan":`Ada kalanya menjauh bukan berarti tidak peduli. Kita semua punya batas tenaga. Jika tubuh dan pikiran sedang lelah, mengambil waktu untuk diam dan memulihkan diri bukan berarti meninggalkan orang-orang yang kita sayangi.
 
 Kadang kita hanya perlu berhenti sebentar agar bisa kembali menjadi diri sendiri.`,
+
 "dia":`Tidak semua rasa harus segera disampaikan. Ada yang untuk sementara cukup ditulis, dinyanyikan, dan disimpan sebagai sebuah cerita.
 
 Tapi jangan sampai terlalu lama menunggu momen yang sempurna, karena terkadang kesempatan tidak datang dua kali.`
+
 };
+
 
 const titles = {
-"aku-siapa":"Aku Siapa","sensasi":"Sensasi Apa Ini","inviniti":"Inviniti","lelah-kawan":"Lelah Kawan","dia":"Dia"
+
+"aku-siapa":"Aku Siapa",
+"sensasi":"Rasa Apa Ini",
+"inviniti":"∞ INFINITY",
+"lelah-kawan":"Lelah Kawan",
+"dia":"Dia"
+
 };
 
+
 function showView(id){
-  document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
-  document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.view===id));
-  window.scrollTo({top:0,behavior:"smooth"});
+
+  document.querySelectorAll(".view")
+    .forEach(v=>v.classList.remove("active"));
+
+  document.getElementById(id)
+    .classList.add("active");
+
+  document.querySelectorAll("nav button")
+    .forEach(b=>
+      b.classList.toggle(
+        "active",
+        b.dataset.view===id
+      )
+    );
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
 }
-document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>showView(b.dataset.view)));
+
+
+document.querySelectorAll("nav button")
+.forEach(b=>
+  b.addEventListener(
+    "click",
+    ()=>showView(b.dataset.view)
+  )
+);
+
 
 let previousView="lyrics";
 
+
 function openSong(key){
+
   previousView="lyrics";
-  document.getElementById("detailLabel").textContent="LIRIK";
-  document.getElementById("detailTitle").textContent=titles[key];
-  document.getElementById("detailContent").innerHTML='<div class="lyrics"></div>';
-  document.querySelector("#detailContent .lyrics").textContent=songs[key].lyrics;
-  document.getElementById("detailLink").innerHTML = songs[key].youtube
-    ? `<a class="youtube" href="${songs[key].youtube}" target="_blank" rel="noopener noreferrer">▶ Dengarkan di YouTube</a>`
-    : `<a class="channel" href="${channel}" target="_blank" rel="noopener noreferrer">🔔 Subscribe & Nantikan di Channel</a>`;
+
+  document.getElementById("detailLabel")
+    .textContent="LIRIK";
+
+  document.getElementById("detailTitle")
+    .textContent=titles[key];
+
+  document.getElementById("detailContent")
+    .innerHTML='<div class="lyrics"></div>';
+
+  document.querySelector("#detailContent .lyrics")
+    .textContent=songs[key].lyrics;
+
+  document.getElementById("detailLink")
+    .innerHTML = songs[key].youtube
+
+    ? `<a class="youtube"
+        href="${songs[key].youtube}"
+        target="_blank"
+        rel="noopener noreferrer">
+        ▶ Dengarkan di YouTube
+       </a>`
+
+    : `<a class="channel"
+        href="${channel}"
+        target="_blank"
+        rel="noopener noreferrer">
+        🔔 Subscribe & Nantikan di Channel
+       </a>`;
+
   showView("detail");
+
 }
+
+
 function openStory(key){
+
   previousView="stories";
-  document.getElementById("detailLabel").textContent="CERITA DI BALIK LIRIK";
-  document.getElementById("detailTitle").textContent=titles[key];
-  document.getElementById("detailContent").innerHTML=`<div class="prose">${stories[key].split("\n\n").map(p=>`<p>${p}</p>`).join("")}</div>`;
-  document.getElementById("detailLink").innerHTML="";
+
+  document.getElementById("detailLabel")
+    .textContent="CERITA DI BALIK LIRIK";
+
+  document.getElementById("detailTitle")
+    .textContent=titles[key];
+
+  document.getElementById("detailContent")
+    .innerHTML=
+      `<div class="prose">
+        ${stories[key]
+          .split("\n\n")
+          .map(p=>`<p>${p}</p>`)
+          .join("")}
+       </div>`;
+
+  document.getElementById("detailLink")
+    .innerHTML="";
+
   showView("detail");
+
 }
+
+
 function openNote(key){
+
   previousView="notes";
-  document.getElementById("detailLabel").textContent="CATATAN";
-  document.getElementById("detailTitle").textContent=titles[key];
-  document.getElementById("detailContent").innerHTML=`<div class="note">${notes[key].split("\n\n").map(p=>`<p>${p}</p>`).join("")}</div>`;
-  document.getElementById("detailLink").innerHTML="";
+
+  document.getElementById("detailLabel")
+    .textContent="CATATAN";
+
+  document.getElementById("detailTitle")
+    .textContent=titles[key];
+
+  document.getElementById("detailContent")
+    .innerHTML=
+      `<div class="note">
+        ${notes[key]
+          .split("\n\n")
+          .map(p=>`<p>${p}</p>`)
+          .join("")}
+       </div>`;
+
+  document.getElementById("detailLink")
+    .innerHTML="";
+
   showView("detail");
+
 }
-function goBack(){showView(previousView)}
+
+
+function goBack(){
+  showView(previousView);
+}
+
 </script>
+
 </body>
 </html>
