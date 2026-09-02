@@ -925,6 +925,9 @@ footer{
       💬 DM TikTok @min12persen
 
     </a>
+<div class="social-links" style="margin-top:12px;">
+  <a class="btn" href="https://youtube.com/@rkntykfm" target="_blank" rel="noopener">▶ YouTube RKNTY</a>
+</div>
 
 
     <div class="identity-author">
@@ -1011,7 +1014,7 @@ footer{
 
 
     <button
-      onclick="showView('lyrics')">
+      onclick="showView('lyrics'); return false;">
 
       <div class="icon">
         📝
@@ -1030,7 +1033,7 @@ footer{
 
 
     <button
-      onclick="showView('stories')">
+      onclick="showView('stories'); return false;">
 
       <div class="icon">
         📖
@@ -1049,7 +1052,7 @@ footer{
 
 
     <button
-      onclick="showView('notes')">
+      onclick="showView('notes'); return false;">
 
       <div class="icon">
         💭
@@ -3015,5 +3018,22 @@ window.addEventListener(
 </script>
 
 
+<script>
+function showView(view) {
+  document.querySelectorAll('.view').forEach(function(el) {
+    el.style.display = 'none';
+  });
+  var target = document.getElementById(view);
+  if (target) {
+    target.style.display = 'block';
+    window.scrollTo({top: 0, behavior: 'auto'});
+  }
+  document.querySelectorAll('nav a, .nav a').forEach(function(a) {
+    a.classList.remove('active');
+  });
+  var active = document.querySelector('[data-view="' + view + '"]');
+  if (active) active.classList.add('active');
+}
+</script>
 </body>
 </html>
